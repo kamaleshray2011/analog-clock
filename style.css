@@ -1,0 +1,163 @@
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a:focus {
+    outline: 0 solid;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+a:focus {
+    outline: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+p:last-child {
+    margin-bottom: 0
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(151, 218, 198);
+}
+
+
+/* clock */
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 20px solid rgb(1, 65, 56);
+    border-radius: 50%;
+    margin: 150px auto;
+    position: relative;
+    padding: 5px;
+    box-shadow: 2px 2px 5px 1px #00000078;
+}
+
+.clock-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(0, 37, 71);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.04s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
+/* Clock middle point */
+
+.clock-main::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 18, 46);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-5px)
+}
+
+
+/* time hours 12 */
+
+.clock-main::before {
+    content: "12";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: rebeccapurple;
+    left: 50%;
+    transform: translate(-10px);
+}
+
+
+/* time hours 03 */
+
+.time::after {
+    content: "03";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: rebeccapurple;
+    top: 50%;
+    right: 0;
+    transform: translateY(-10px);
+}
+
+
+/* time hours 06 */
+
+.time::before {
+    content: "06";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: rebeccapurple;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-10px);
+}
+
+
+/* time hours 09*/
+
+.time1::before {
+    content: "09";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: rebeccapurple;
+    left: 0;
+    top: 50%;
+    transform: translateY(-10px);
+}
